@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+  <title>iPhone / Android app without a Mac</title>
+  <meta charset='utf-8'>
+  <script src='http://html5slides.googlecode.com/svn/trunk/slides.js'></script>
+  <style>
+	/* remove the Google logo */
+    article {
+		background: #fff !important; /* haha, first time in my life I've used !important */
+	}
+	.string {
+		color: #008A35;
+	}
+	.small2 {
+		font-size: 18px !important;
+	}
+  </style> 
+</head>
+
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-default'>
+
+      <article>
+        <h1>iPhone / Android app without a Mac</h1>
+        <p>Alper Sunar
+          <br>
+          June 2012
+        </p>
+      </article>
+      
+      <article>
+       <h3>Overview</h3>
+        <ul>
+          <li>Part I: Development Stack
+          <li>Part II: App Store submission tips from the Trenches
+          <li>Q&amp;A
+        </ul>
+      </article>
+	  
+	  <article>
+		<h3>Goal</h3>
+		<p>Build a cross platform app to solve a REAL problem and submit to App Store / Google Play</p>
+    <ul>
+      <li>Scratch your own itch.  
+      <li>Diversify skills, bragging rights
+      <li>Time is very scarce when you are a parent. Not enough time to master Java / Objective C
+      <li>Prefer to bet on open technologies like HTML5, JS and CSS etc.   
+    </ul>
+		<img src="img/js_smaller_jobgraph.png" alt="JavaScript Job Trends" class='centered' />
+	  </article>
+
+	  <article>
+		<h1>Development Stack</h1>
+		<p>Part I</p>
+	  </article>
+	  
+	  <article>
+		<h3>Tools, Languages & Frameworks that cost NOTHING</h3>
+		<ul>
+			<li>HTML5 (LocalStorage via Backbone)
+			<li>JavaScript (Backbone.js, jQuery Mobile)
+			<li>PhoneGap and PhoneGap build
+      <li>Vim (Alternatives: Sublime, WebStorm)
+      <li>TestFlightApp
+      <li>VirtualBox
+		</ul>
+
+    <p>Check out official documentation / mailing lists. Clone sample app and hack away.</p>
+	  </article>
+	  
+      <article>
+        <h3>Lessons Learned</h3>
+          <ul>
+            <li>Keep it SIMPLE. Hell is configuring Vim on Windows
+            <li>Firebug is your friend
+            <li>Test in Firefox to avoid same origin error with JQuery Mobile
+            <li>Test app on the targeted devices
+            <li>Test app on the targeted devices (not a typo)
+            <li>Pick an available app name and stick with it           
+          </ul>
+	  </article>
+	  
+    <article>
+    <h1>App Store submission tips from the Trenches</h1>
+    <p>Part II</p>
+    </article>    
+
+      <article>
+        <h3>Submitting to Google Play</h3>
+          <ul>
+            <li>Smooth as silk, just follow the instructions           
+          </ul>        
+
+      </article>		  
+	  
+      <article>
+        <h3>Submitting to App Store</h3>
+          <ul>
+            <li>Detailed Guide for setting up building iOS apps without a Mac<sup>1<sup>    
+            <li>If you get a 'Can't open config file error' <sup>2<sup>          
+            <li>Build a Hackintosh in a VirtualBox preferably (10.6.8)<sup>3</sup>
+            <li>Download and install XCode 4.2 to your Hackintosh
+            <li>Upload your *.ipa file using Application Loader in your Hackintosh
+          </ul> 
+
+          <ol>
+            <li>http://community.phonegap.com/nitobi/topics/ detailed_guide_for_setting_up_building_ios_apps_without_a_mac
+            <li>http://jaspreetchahal.org/warning-cant-open-config-file-usrlocalsslopenssl-cnf/
+            <li>http://www.sysprobs.com/install-mac-snow-leopard-1063-oracle-virtualbox-32-apple-intel-pc
+
+          </ol>
+      </article>
+	  
+
+	  
+
+	  
+      <article class="smaller">
+        <h1>Thank you!</h1>
+        <p>Alper Sunar
+          <br />
+          <a href="mailto:chris@oakmac.com">alper_sunar@yahoo.com</a>
+      </article>
+
+    </section>
