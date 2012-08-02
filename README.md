@@ -1,5 +1,4 @@
-AustinCodeCamp2012
+Internal Brown Bag Talk
 ==================
 
-Slides for my Lightning Talk
-iPhone / Android app without a Mac
+Slides for internal brown bag talk 
