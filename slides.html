@@ -109,7 +109,8 @@
     </article>
 
     <article>
-      <h1>Baby Birdie in stores</h1>
+      <h1>Baby Birdie</h1>
+      <p>Demo</p>
     </article>
 
     <article>
@@ -152,13 +153,91 @@
     </article>
 
     <article>
-      <h1>JQueryMobile DEMO</h1>
+      <h3>JQuery Mobile Markup</h3>
+      <img src="img/withjqm.png" alt="PhoneGap logo" class='centered' />
+      <pre>
+&lt;body&gt; 
+&lt;div data-role="page"&gt; 
+  &lt;div data-role="header"&gt;  &lt;h1&gt;Single page&lt;/h1&gt;&lt;/div&gt; 
+  &lt;div data-role="content"&gt; 
+    &lt;h1&gt;Welcome to List&lt;/h1&gt;
+    &lt;p&gt;
+    &lt;a rel="external" href="..." data-role="button"&gt;Start with the default list&lt;/a&gt;
+    &lt;/p&gt; 
+  &lt;/div&gt;&lt;!-- /content --&gt; 
+&lt;/div&gt;&lt;!-- /page --&gt; 
+&lt;/body&gt;         
+      </pre>
+
     </article>
 
     <article>
       <img src="img/backbone.png" alt="Backbone.js" class='centered' />
       <p>Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface. </p>
-    </article>    
+
+    </article>
+
+    <article>
+      <p>Templating engine in Backbone helps you avoid mixing your model with the view</p>
+      <pre style="font-size='smaller'">
+function getEmployeeList() {
+  $.getJSON(serviceURL + 'getemployees.php', function(data) {
+    $('#employeeList li').remove();
+    employees = data.items;
+    $.each(employees, function(index, employee) {
+      $('#employeeList').append('&lt;li&gt;&lt;a href="employeedetails.html?id=' + employee.id + '"&gt;' +
+          '&lt;img src="pics/' + employee.picture + '"/&gt;' +
+          '&lt;h4&gt;' + employee.firstName + ' ' + employee.lastName + '&lt;/h4&gt;' +
+          '&lt;p&gt;' + employee.title + '&lt;/p&gt;' +
+          '&lt;span class="ui-li-count"&gt;' + employee.reportCount + '&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;');
+    });
+    $('#employeeList').listview('refresh');
+});
+
+      </pre>      
+    </article> 
+
+    <article>
+      <h3>Templating engine at work</h3>
+      <pre>
+&lt;script type="text/template" id="selectItemTemplate"&gt;
+  &lt;a href="catalog.html?name=&lt;%= this.model.get('name') %&gt;"&gt;
+    &lt;h3&gt;&lt;%= this.model.get('name') %&gt;&lt;/h3&gt;
+    &lt;p&gt;&lt;%= this.model.get('description') %&gt;&lt;/p&gt;
+    &lt;p&gt;Source:&lt;%= this.model.get('source') %&gt;&lt;/p&gt;
+  &lt;/a&gt;
+&lt;/script&gt;
+      </pre>
+    </article>   
+
+    <article>
+      <h3>Events</h3>
+      <pre style="margin-top:0px">
+window.ItemView = Backbone.View.extend({
+    tagName:  "li",
+    events: {
+      "click .deleteItemLink"          : "deleteItem"
+    },
+    initialize: function() {
+            this.model.bind('change', this.render, this);
+            this.model.bind('destroy', this.remove, this);            
+          this.template = _.template($('#allItemsTemplate').html());
+          },
+  render: function() {.....    },
+    deleteItem: function() {
+                    if(confirm('Are you sure?'))
+                    {
+                        this.model.destroy();
+                        $('#itemsListView').listview("refresh"); 
+                    }
+                },    
+   // Remove this view from the DOM.
+    remove: function() {
+      $(this.el).remove(); 
+    }, 
+});
+      </pre>        
+    </article>
 
     <article>
       <img src="img/phonegap-logo.png" alt="PhoneGap logo" class='centered' />
@@ -305,9 +384,17 @@
       </ul> 
     </article>
 	  
+<article>
+  <h3>Developing a Mobile strategy</h3>
+  <p>http://martinfowler.com/articles/multiMobile/</p>
+  <img src="img/fowler80.png" alt="Native App" />
+
+</article>
+
     <article>
       <h1>Q & A</h1>
     </article>
+
 
 	  
       <article class="smaller">
@@ -315,7 +402,7 @@
         <p>Alper Sunar
           <br />
           <a href="mailto:chris@oakmac.com">alper_sunar@yahoo.com</a><br />
-		  <a href="https://github.com/asunar/AustinCodeCamp2012-Lightning-Talk">https://github.com/asunar/AustinCodeCamp2012-Lightning-Talk</a>
+  
       </article>
 
     </section>
