@@ -1,0 +1,26 @@
+Story:
+Hello everyone. Thanks for attending the Cross Platform Mobile app session
+
+Who?
+My name is Alper - .NET Developer by day, Ruby/Rails/JS/NodeJS newbie at night
+
+What?
+In this session I will go over the process I followed to publish a cross platform (iPhone - Android) in the respective app stores.
+
+Why?
+To inspire you to create your own mobile apps 
+
+Don't know Objective-C, Java? No problem
+Don't have a Mac? No worries
+
+
+I have a two year old with a full-time day job. If I can do this, anyone can.
+
+Are you guys pumped up?
+
+First a little disclaimer. I'm NOT an expert. I just wanted to show how I did it.
+
+Let's talk a little about your options
+Native vs Web
+
+
